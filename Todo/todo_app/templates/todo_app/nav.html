@@ -1,0 +1,62 @@
+{% load static %}
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Caveat:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+        body{
+            font-family: 'Montserrat';
+            height: 100%;
+            /* background: #614385;
+            background: -webkit-linear-gradient(to right, #516395, #614385);
+            background: linear-gradient(to right, #516395, #614385);  */
+
+            background: #16222A; 
+            background: -webkit-linear-gradient(to right, #3A6073, #16222A); 
+            background: linear-gradient(to right, #3A6073, #16222A);
+        }
+    </style>
+    <title>Todo</title>
+        </head>
+    <body>
+        <nav class="nav-wrapper white" > 
+            <div class="container">
+                    
+                    <div id="nav">
+                        <a href="#" class="brand-logo" style="color:black; font-family: 'Berkshire Swash', cursive">TODO</a>
+                        <a href="#" class="sidenav-trigger" data-target="mobile">
+                            <i class="medium material-icons" style="color:black">menu</i>
+                            
+                        </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li id="mobile-nav">
+                        <a href="#"></a>
+                        </li>
+                        
+                        
+                    </ul>
+                    </div>
+                </nav>
+                <ul class="sidenav white" id="mobile">
+                    <li><a href="/"style="color: black">
+                    <span>Plan your day</span>
+                    <i class="material-icons" style="color:black">web_asset</i>
+                    </a></li>
+                    <li><a href="https://github.com/Hrithik5" style="color:clack">
+                        <span>My Github</span>
+                    <i class="material-icons" style="color:black">person_pin</i>
+                    </a></li>
+                </ul>
+        <!-- Nav ends  -->
+        {% block content %}
+        {% endblock %}
